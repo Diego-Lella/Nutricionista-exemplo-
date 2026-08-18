@@ -1421,3 +1421,744 @@ svg {
   color: var(--on-dark);
   }
   
+/* =====================================================
+   RESPONSIVIDADE — TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .container {
+    width: min(calc(100% - 40px), var(--container));
+  }
+
+  .section {
+    padding: 90px 0;
+  }
+
+  /* HEADER */
+  .nav {
+    height: 76px;
+  }
+
+  .site-header.is-scrolled .nav {
+    height: 68px;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 32;
+  }
+
+  .nav-links {
+    position: absolute;
+
+    top: 100%;
+    left: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    background: rgba(250, 246, 238, 0.97);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow: 0 20px 50px rgba(43, 61, 48, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.3s var(--ease),
+      transform 0.3s var(--ease),
+      visibility 0.3s ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links > a {
+    display: block;
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-radius: 12px;
+  }
+
+  .nav-links > a:not(.nav-cta):hover {
+    background: var(--sage-soft);
+  }
+
+  .nav-cta {
+    text-align: center;
+    margin-top: 6px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: auto;
+    padding-top: 125px;
+    padding-bottom: 80px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero .eyebrow {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    max-width: 700px;
+    margin-inline: auto;
+
+    font-size: clamp(38px, 7vw, 58px);
+  }
+
+  .hero-text {
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-proof {
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+  .hero-visual {
+    min-height: 500px;
+  }
+
+  .portrait-frame {
+    max-width: 400px;
+  }
+
+  .floating-card-top {
+    right: 5%;
+  }
+
+  .floating-card-bottom {
+    left: 5%;
+  }
+
+
+  /* SOBRE */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .about-visual {
+    order: 1;
+  }
+
+  .about-copy {
+    order: 2;
+    text-align: center;
+  }
+
+  .about-copy h2,
+  .about-copy > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-copy .eyebrow {
+    justify-content: center;
+  }
+
+  .credential-card {
+    text-align: left;
+  }
+
+
+  /* SERVIÇOS */
+
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 45px;
+  }
+
+  .service-card {
+    padding: 28px;
+  }
+
+
+  /* BENEFÍCIOS */
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .benefits-copy {
+    text-align: center;
+  }
+
+  .benefits-copy h2,
+  .benefits-copy > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .benefits-copy .eyebrow {
+    justify-content: center;
+  }
+
+  .benefits-note {
+    justify-content: center;
+    text-align: left;
+  }
+
+
+  /* PROCESSO */
+
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 25px;
+  }
+
+  .process-line {
+    display: none;
+  }
+
+  .process-step p {
+    max-width: none;
+  }
+
+
+  /* DEPOIMENTOS */
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .testimonial-card {
+    padding: 28px;
+  }
+
+
+  /* CTA */
+
+  .cta-card {
+    padding: 70px 40px;
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE — CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+
+  /* HEADER */
+
+  .nav {
+    height: 70px;
+  }
+
+  .site-header.is-scrolled .nav {
+    height: 64px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .icon-leaf {
+    width: 18px;
+    height: 18px;
+  }
+
+  .nav-links {
+    left: 16px;
+    right: 16px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    padding-top: 110px;
+    padding-bottom: 65px;
+  }
+
+  .hero-grid {
+    gap: 45px;
+  }
+
+  .hero h1 {
+    margin-top: 18px;
+
+    font-size: clamp(34px, 10vw, 46px);
+
+    line-height: 1.08;
+  }
+
+  .hero-text {
+    margin-top: 20px;
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+
+    gap: 14px;
+
+    width: 100%;
+
+    margin-top: 30px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 320px;
+
+    min-height: 52px;
+
+    padding: 15px 20px;
+  }
+
+  .hero-proof {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+
+  .proof-item {
+    text-align: center;
+  }
+
+  .proof-item strong {
+    font-size: 9px;
+  }
+
+  .proof-item span {
+    font-size: 9px;
+  }
+
+
+  /* HERO VISUAL */
+
+  .hero-visual {
+    min-height: 420px;
+  }
+
+  .hero-blob {
+    width: 90%;
+    height: 90%;
+  }
+
+  .portrait-frame {
+    width: 82%;
+    max-width: 330px;
+  }
+
+  .floating-card {
+    padding: 11px 13px;
+
+    gap: 8px;
+
+    border-radius: 12px;
+  }
+
+  .floating-card-top {
+    top: 20px;
+    right: 0;
+  }
+
+  .floating-card-bottom {
+    bottom: 20px;
+    left: 0;
+  }
+
+  .floating-card strong {
+    font-size: 10px;
+  }
+
+  .floating-card small {
+    font-size: 8.5px;
+  }
+
+  .floating-card svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+
+  /* MARQUEE */
+
+  .marquee-section {
+    padding: 18px 0;
+  }
+
+
+  /* TÍTULOS */
+
+  .section-heading h2 {
+    font-size: clamp(30px, 9vw, 40px);
+  }
+
+  .section-heading > p:not(.eyebrow) {
+    font-size: 14px;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+  }
+
+  .eyebrow span {
+    width: 22px;
+  }
+
+
+  /* SOBRE */
+
+  .about-grid {
+    gap: 40px;
+  }
+
+  .about-frame {
+    max-width: 320px;
+  }
+
+  .about-copy h2 {
+    font-size: clamp(29px, 8.5vw, 38px);
+  }
+
+  .about-copy > p {
+    font-size: 14px;
+  }
+
+  .credential-card {
+    margin-top: 28px;
+
+    padding: 20px;
+  }
+
+  .credential-item {
+    display: block;
+
+    padding: 12px 0;
+  }
+
+  .credential-item dt {
+    min-width: 0;
+
+    margin-bottom: 3px;
+  }
+
+  .credential-item dd {
+    font-size: 12px;
+  }
+
+
+  /* SERVIÇOS */
+
+  .service-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 40px;
+  }
+
+  .service-card {
+    padding: 25px;
+  }
+
+  .service-icon {
+    margin-bottom: 28px;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+  }
+
+
+  /* BENEFÍCIOS */
+
+  .benefits-grid {
+    gap: 38px;
+  }
+
+  .benefits-copy h2 {
+    font-size: clamp(29px, 8.5vw, 38px);
+  }
+
+  .benefits-copy > p:not(.eyebrow) {
+    font-size: 14px;
+  }
+
+  .benefits-note {
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+
+  .benefits-panel {
+    padding: 22px 20px;
+  }
+
+  .included-item {
+    gap: 12px;
+    padding: 13px 0;
+  }
+
+  .included-number {
+    width: 28px;
+    height: 28px;
+  }
+
+  .included-item span {
+    font-size: 12.5px;
+  }
+
+
+  /* PROCESSO */
+
+  .process-grid {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    margin-top: 45px;
+  }
+
+  .process-step {
+    padding-bottom: 24px;
+
+    border-bottom: 1px solid var(--border);
+  }
+
+  .process-step:last-child {
+    border-bottom: none;
+  }
+
+  .process-step h3 {
+    margin-top: 12px;
+    font-size: 20px;
+  }
+
+  .process-step p {
+    max-width: 100%;
+    font-size: 12.5px;
+  }
+
+
+  /* DEPOIMENTOS */
+
+  .testimonial-grid {
+    margin-top: 40px;
+  }
+
+  .testimonial-card {
+    padding: 24px;
+  }
+
+  .testimonial-card p {
+    font-size: 13px;
+  }
+
+
+  /* CTA */
+
+  .cta-section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .cta-card {
+    padding: 55px 22px;
+
+    border-radius: 22px;
+  }
+
+  .cta-card h2 {
+    font-size: clamp(29px, 8.5vw, 40px);
+  }
+
+  .cta-card > p:not(.eyebrow) {
+    font-size: 13.5px;
+  }
+
+  .cta-note {
+    font-size: 10px;
+  }
+
+
+  /* FOOTER */
+
+  .footer {
+    padding: 32px 0;
+    text-align: center;
+  }
+
+  .footer .logo {
+    justify-content: center;
+  }
+}
+
+
+/* =====================================================
+   CELULARES PEQUENOS
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-proof {
+    gap: 8px;
+  }
+
+  .proof-item strong {
+    font-size: 8px;
+  }
+
+  .proof-item span {
+    font-size: 8px;
+  }
+
+  .hero-visual {
+    min-height: 360px;
+  }
+
+  .portrait-frame {
+    width: 78%;
+  }
+
+  .floating-card {
+    padding: 9px 10px;
+  }
+
+  .floating-card-top {
+    right: -2px;
+  }
+
+  .floating-card-bottom {
+    left: -2px;
+  }
+
+  .floating-card strong {
+    font-size: 9px;
+  }
+
+  .floating-card small {
+    font-size: 8px;
+  }
+
+  .service-card {
+    padding: 22px;
+  }
+
+  .benefits-panel {
+    padding: 18px 16px;
+  }
+
+  .included-item span {
+    font-size: 12px;
+  }
+
+  .cta-card {
+    padding: 48px 18px;
+  }
+}
+
+
+/* =====================================================
+   ACESSIBILIDADE / PERFORMANCE NO MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  /* Evita animações excessivamente pesadas em telas pequenas */
+  .hero-blob {
+    animation-duration: 24s;
+  }
+
+  .portrait-frame:hover,
+  .service-card:hover,
+  .button-primary:hover,
+  .button-light:hover {
+    transform: none;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
